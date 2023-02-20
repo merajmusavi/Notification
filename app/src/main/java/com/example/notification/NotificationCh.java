@@ -1,10 +1,12 @@
 package com.example.notification;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 
 public class NotificationCh extends Application {
+    @SuppressLint("SuspiciousIndentation")
     @Override
     public void onCreate() {
         super.onCreate();
