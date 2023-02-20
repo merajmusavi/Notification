@@ -21,6 +21,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button = findViewById(R.id.button);
         Button BigPic = findViewById(R.id.bigPicShow);
+        Button LongText = findViewById(R.id.button3);
+
+        LongText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Notification notification = new NotificationCompat.Builder(getApplicationContext(), "myapp")
+                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setLargeIcon(BitmapFactory
+                                .decodeResource(getResources(), R.mipmap.ic_launcher))
+                        .setContentTitle("fsasfasfd")
+                        .setContentText("sadfsefewfwsfewswfc")
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText("dzfdsfffffffffffffffffffffffffffffffffff afasfasf swefaesws fwefewfwefewfwefwefewewfwe f qfe fewfew sefsef esef se fw fsef wefwfwe fwef we fewf we fw fwf qw fwe fwfewf wefew fweefewfrewfwfwefw4 wsvswfw efwesdvcwrre frw werf wefw"))
+                        .build();
+
+                notificationManager.notify(2, notification);
+            }
+        });
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         BigPic.setOnClickListener(new View.OnClickListener() {
             @Override
